@@ -18,29 +18,29 @@ namespace PFC_Backend.Controllers
 		public List<Ancestry> Get()
 		{
 			var db = LiteDBClient.Database;
-			//var ancestries = db.GetCollection<Model.Ancestry>(LiteDBClient.Ancestries).FindAll().ToList();
-			var ancestries = new List<Ancestry>
-			{
-				new Ancestry
-				{
-					Name= new List<LocalizedText>
-					{
-						new LocalizedText
-						{
-							Text = "Dwarf",
-							Language = "en"
-						}
-					},
-					AbilityBoosts = new List<string>
-					{
-						"CON","WIS", "FREE"
-					},
-					AbilityFlaw = new List<string>
-					{
-						"CHA"
-					}
-				}
-			};
+			var ancestries = db.GetCollection<Model.Ancestry>(LiteDBClient.Ancestries).FindAll().ToList();
+			//var ancestries = new List<Ancestry>
+			//{
+			//	new Ancestry
+			//	{
+			//		Name= new List<LocalizedText>
+			//		{
+			//			new LocalizedText
+			//			{
+			//				Text = "Dwarf",
+			//				Language = "en"
+			//			}
+			//		},
+			//		AbilityBoosts = new List<string>
+			//		{
+			//			"CON","WIS", "FREE"
+			//		},
+			//		AbilityFlaw = new List<string>
+			//		{
+			//			"CHA"
+			//		}
+			//	}
+			//};
 			return ancestries;
 		}
 		[HttpGet("{id}")]
