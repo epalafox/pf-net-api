@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>PFC_Backend</RootNamespace>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>851782d8-a743-46b8-9c6f-c1ae8f8e7f99</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

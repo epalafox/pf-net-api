@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pfc-backend:
+    image: ${DOCKER_REGISTRY-}pfcbackend
+    build:
+      context: .
+      dockerfile: PFC-Backend/Dockerfile
